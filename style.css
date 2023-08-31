@@ -1,6 +1,6 @@
 #scenary {
 
-    
+
     height: 100%;
     width: 500px;
     margin: auto;
@@ -28,4 +28,10 @@ tr {
 
 .wall {
     background-color: grey;
+}
+
+.player{
+    background-color: blue;
+    width: 20px;
+    height: 20px;
 }
