@@ -1,6 +1,7 @@
 import { Player } from "./player.js";
 
-
+// Creación del tablero
+var player1 = new Player(10, 19)
 var game = {
     createBoard() {
         var obstacles = [];
@@ -19,9 +20,9 @@ var game = {
             });
             table.appendChild(tr);
         });
-       var player1 = new Player(10, 19)
+
         player1.drawPlayer();
-       // enemy.showEnemy();
+        // enemy.showEnemy();
     }
 }
 
@@ -53,3 +54,8 @@ let boundMap = [
     ['-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-'],
 ]
 game.createBoard()
+
+// Creación de colisiones y movimientos
+
+
+
