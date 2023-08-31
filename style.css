@@ -1,0 +1,31 @@
+#scenary {
+
+    
+    height: 100%;
+    width: 500px;
+    margin: auto;
+}
+
+#board {
+    border: black 2px solid;
+    height: 100%;
+    width: 100%;
+    margin: auto;
+    background-color: rgb(194, 245, 252);
+}
+
+td {
+    border: black 0.1px solid;
+    width: 20px;
+    height: 20px;
+}
+
+tr {
+    border: black 2px solid;
+    width: 20px;
+    height: 20px;
+}
+
+.wall {
+    background-color: grey;
+}
