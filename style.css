@@ -33,15 +33,16 @@ tr {
 }
 
 .player{
-    background-color: blue;
     width: 20px;
     height: 20px;
+    background-image: url(./assets/tanks\(1\).png);
 }
 
 .enemy {
-    background-color: rgb(255, 0, 0);
+   
     width: 20px;
     height: 20px;
+     background-image: url(./assets/tanks\(3\).png);
 }
 .bullet {
     width: 5px;
