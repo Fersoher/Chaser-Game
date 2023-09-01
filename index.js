@@ -57,5 +57,26 @@ game.createBoard()
 
 // Creación de colisiones y movimientos
 
+window.addEventListener('keydown', function (e) {
+    console.log(e.key)
+    if (e.key == 'w') {
+        player1.direction = "up"
+        player1.movePlayer()
+    }
+    if (e.key == 'a') {
+        player1.direction = "left"
+        player1.movePlayer()
+    }
+    if (e.key == 's') {
+        player1.direction = "down"
+        player1.movePlayer()
+    }
+    if (e.key == 'd') {
+        player1.direction = "right"
+        player1.movePlayer()
+    
+    }
+
+})
 
 

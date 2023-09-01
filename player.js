@@ -6,7 +6,38 @@ function Player(x, y) {
 
 
     this.movePlayer = function () {
-        
+        switch (self.direction) {
+            case 'up':
+                if (false) {
+                    console.log("cant move")
+                } else {
+                    self.y--
+                }
+                break
+            case 'left':
+                if (false) {
+
+                } else {
+                    self.x--
+                }
+                break
+            case 'down':
+                if (false) {
+
+                } else {
+                    self.y++
+                }
+                break
+            case 'right':
+                if (false) {
+
+                } else {
+                    self.x++
+                }
+                break
+        }
+        self.erase()
+        self.drawPlayer();
     }
     this.drawPlayer = function () {
         var playerCell = document.querySelector(`#row${this.y} #col${this.x}`)
@@ -52,39 +83,10 @@ function Player(x, y) {
         const boundaries = ["wall", "enemy", "player"];
         return boundaries.includes(cell.getAttribute("class"));
     }
-    
-    window.addEventListener('keydown', function (e) {
-            console.log(e.key)
-            if (e.key == 'w') {
-                self.y--;
-                self.erase()
-                self.drawPlayer();
-            }
-            if (e.key == 'a') {
-                self.x--;
-                self.erase()
-                self.drawPlayer();
-            }
-            if (e.key == 's') {
-                self.y++;
-                self.erase()
-                self.drawPlayer();
-            }
-            if (e.key == 'd') {
-                self.x++;
-                self.erase()
-                self.drawPlayer();
-            }
 
-            
 
-        })
 
 }
-
-
-
-
 
 
 
