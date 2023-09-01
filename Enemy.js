@@ -96,7 +96,7 @@ function Enemy(x, y) {
     }
     function checkBoundaries(cell) {
         //const boundaries = ["wall", "enemy", "enemy"];
-        return cell.getAttribute("class") === "wall";
+        return cell.getAttribute("class") === "wall" || cell.getAttribute("class") === "player";
     }
 
 
