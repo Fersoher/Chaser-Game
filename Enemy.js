@@ -13,6 +13,7 @@ function Enemy(x, y) {
         var move = ["up", "left", "right", "down"]
         this.direction = move[Math.floor(Math.random()*4)]
         
+        
     }
 
 
@@ -26,7 +27,7 @@ function Enemy(x, y) {
         switch (self.direction) {
             case 'up':
                 if (checkBoundaries(document.querySelector(`#row${self.y - 1} #col${self.x}`))) {
-                    console.log("cant move")
+                    
                 } else {
                     self.y--
                 }

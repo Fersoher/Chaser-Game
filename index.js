@@ -1,5 +1,6 @@
 import { Player } from "./player.js";
 import { Enemy } from "./Enemy.js"
+import { Bullet } from "./bullet.js"
 // Creación del tablero
 var player1 = new Player(10, 19)
 var enemy1 = new Enemy(10, 3)
@@ -77,6 +78,11 @@ window.addEventListener('keydown', function (e) {
         player1.direction = "right"
         player1.movePlayer()
     
+    }
+    if (e.key == ' ') {
+        var bullet = new Bullet(player1)
+        bullet.createShoot(player1)
+        
     }
 
 })
