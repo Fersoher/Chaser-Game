@@ -82,25 +82,4 @@ window.addEventListener('keydown', function (e) {
 })
 
 
-window.addEventListener('keydown', function (e) {
-    console.log(e.key)
-    if (e.key == 'w') {
-        enemy1.direction = "up"
-        enemy1.moveEnemy()
-    }
-    if (e.key == 'a') {
-        enemy1.direction = "left"
-        enemy1.moveEnemy()
-    }
-    if (e.key == 's') {
-        enemy1.direction = "down"
-        enemy1.moveEnemy()
-    }
-    if (e.key == 'd') {
-        enemy1.direction = "right"
-        enemy1.moveEnemy()
-
-    }
-
-})
-
+setInterval(enemy1.moveEnemy, 500)

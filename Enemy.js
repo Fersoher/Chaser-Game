@@ -4,8 +4,25 @@ function Enemy(x, y) {
     this.direction = ''
     var self = this
 
+    setInterval(self.randomMove,100)
+
+    
+    
+    
+    this.randomMove = function() {
+        var move = ["up", "left", "right", "down"]
+        this.direction = move[Math.floor(Math.random()*4)]
+        
+    }
+
+
+
+
+    
+
 
     this.moveEnemy = function () {
+        self.randomMove()
         switch (self.direction) {
             case 'up':
                 if (checkBoundaries(document.querySelector(`#row${self.y - 1} #col${self.x}`))) {
@@ -50,26 +67,26 @@ function Enemy(x, y) {
 
     this.collisionCheck = function (direction) {
         let x, y;
-        switch (direction) {
-            case "w":
+        switch (this.direction) {
+            case "up":
                 self.y - 1;
                 self.x;
                 return self.checkBoundaries(cell)
                 document.querySelector(`#row${y} #col${x}`)
                     ;
-            case "a":
+            case "left":
                 self.y;
                 self.x - 1;
                 return self.checkBoundaries(cell)
                 document.querySelector(`#row${y} #col${x}`)
                     ;
-            case "s":
+            case "down":
                 self.y + 1;
                 self.x;
                 return self.checkBoundaries(cell)
                 document.querySelector(`#row${y} #col${x}`)
                     ;
-            case "d":
+            case "right":
                 self.y;
                 self.x + 1;
                 return self.checkBoundaries(cell)
