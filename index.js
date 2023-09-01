@@ -1,7 +1,8 @@
 import { Player } from "./player.js";
-
+import { Enemy } from "./Enemy.js"
 // Creación del tablero
 var player1 = new Player(10, 19)
+var enemy1 = new Enemy(10, 3)
 var game = {
     createBoard() {
         var obstacles = [];
@@ -22,6 +23,7 @@ var game = {
         });
 
         player1.drawPlayer();
+        enemy1.drawEnemy()
         // enemy.showEnemy();
     }
 }
@@ -79,4 +81,26 @@ window.addEventListener('keydown', function (e) {
 
 })
 
+
+window.addEventListener('keydown', function (e) {
+    console.log(e.key)
+    if (e.key == 'w') {
+        enemy1.direction = "up"
+        enemy1.moveEnemy()
+    }
+    if (e.key == 'a') {
+        enemy1.direction = "left"
+        enemy1.moveEnemy()
+    }
+    if (e.key == 's') {
+        enemy1.direction = "down"
+        enemy1.moveEnemy()
+    }
+    if (e.key == 'd') {
+        enemy1.direction = "right"
+        enemy1.moveEnemy()
+
+    }
+
+})
 

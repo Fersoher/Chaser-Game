@@ -1,11 +1,11 @@
-function Player(x, y) {
+function Enemy(x, y) {
     this.x = x
     this.y = y
     this.direction = ''
     var self = this
 
 
-    this.movePlayer = function () {
+    this.moveEnemy = function () {
         switch (self.direction) {
             case 'up':
                 if (checkBoundaries(document.querySelector(`#row${self.y - 1} #col${self.x}`))) {
@@ -37,18 +37,16 @@ function Player(x, y) {
                 break
         }
         self.erase()
-        self.drawPlayer();
+        self.drawEnemy();
     }
-    this.drawPlayer = function () {
-        var playerCell = document.querySelector(`#row${this.y} #col${this.x}`)
-        playerCell.classList.add("player")
+    this.drawEnemy = function () {
+        var enemyCell = document.querySelector(`#row${this.y} #col${this.x}`)
+        enemyCell.classList.add("enemy")
     }
     this.erase = function () {
-        var playerCell = document.querySelector('.player')
-        playerCell.classList.remove('player')
+        var enemyCell = document.querySelector('.enemy')
+        enemyCell.classList.remove('enemy')
     }
-
-
 
     this.collisionCheck = function (direction) {
         let x, y;
@@ -57,30 +55,30 @@ function Player(x, y) {
                 self.y - 1;
                 self.x;
                 return self.checkBoundaries(cell)
-                    document.querySelector(`#row${y} #col${x}`)
-                ;
+                document.querySelector(`#row${y} #col${x}`)
+                    ;
             case "a":
                 self.y;
                 self.x - 1;
                 return self.checkBoundaries(cell)
-                    document.querySelector(`#row${y} #col${x}`)
-                ;
+                document.querySelector(`#row${y} #col${x}`)
+                    ;
             case "s":
                 self.y + 1;
                 self.x;
                 return self.checkBoundaries(cell)
-                    document.querySelector(`#row${y} #col${x}`)
-                ;
+                document.querySelector(`#row${y} #col${x}`)
+                    ;
             case "d":
                 self.y;
                 self.x + 1;
                 return self.checkBoundaries(cell)
-                    document.querySelector(`#row${y} #col${x}`)
-                ;
+                document.querySelector(`#row${y} #col${x}`)
+                    ;
         }
     }
     function checkBoundaries(cell) {
-        //const boundaries = ["wall", "enemy", "player"];
+        //const boundaries = ["wall", "enemy", "enemy"];
         return cell.getAttribute("class") === "wall";
     }
 
@@ -98,7 +96,6 @@ function Player(x, y) {
 
 
 
-export { Player }
-
+export { Enemy }
 
 
