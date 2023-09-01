@@ -1,8 +1,8 @@
 #scenary {
 
 
-    height: 100%;
-    width: 500px;
+    height: 90vh;
+    width: 90vh;
     margin: auto;
 }
 
@@ -13,6 +13,8 @@
     margin: auto;
     background-color: rgb(194, 245, 252);
     background-image: url(./assets/Grey_Brick.webp);
+    background-size: 4vh
+    
 }
 
 td {
@@ -29,20 +31,29 @@ tr {
 
 .wall {
     background-color: grey;
-    background-image: url(./assets/Steel_Block.webp);
+    background-image: url(./assets/Grey_Block.webp);
+    background-repeat: no-repeat;
+    background-size: 4vh
+    
 }
 
 .player{
     width: 20px;
     height: 20px;
-    background-image: url(./assets/tanks\(1\).png);
+    background-image: url(./assets/tanks\(4\).png);
+    background-repeat: no-repeat;
+    background-size: 4vh
 }
 
 .enemy {
    
     width: 20px;
     height: 20px;
-     background-image: url(./assets/tanks\(3\).png);
+    background-image: url(./assets/tanks\(2\).png);
+    background-repeat: no-repeat;
+    background-size: 4vh
+    
+
 }
 .bullet {
     width: 5px;
