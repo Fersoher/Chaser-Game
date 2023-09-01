@@ -35,7 +35,7 @@ function Bullet(player) {
                 this.x = player.x + 1
                 break
         }
-        this.timerId = setInterval(self.erase, 500)
+        this.timerId = setTimeout(self.erase, 500)
         
         
     }

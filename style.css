@@ -12,6 +12,7 @@
     width: 100%;
     margin: auto;
     background-color: rgb(194, 245, 252);
+    background-image: url(./assets/Grey_Brick.webp);
 }
 
 td {
@@ -28,6 +29,7 @@ tr {
 
 .wall {
     background-color: grey;
+    background-image: url(./assets/Steel_Block.webp);
 }
 
 .player{
