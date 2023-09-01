@@ -18,6 +18,41 @@ function Player(x, y) {
     }
 
 
+
+    this.collisionCheck = function (direction) {
+        let x, y;
+        switch (direction) {
+            case "w":
+                self.y - 1;
+                self.x;
+                return self.checkBoundaries(
+                    document.querySelector(`#row${y} #col${x}`)
+                );
+            case "a":
+                self.y;
+                self.x - 1;
+                return self.checkBoundaries(
+                    document.querySelector(`#row${y} #col${x}`)
+                );
+            case "s":
+                self.y + 1;
+                self.x;
+                return self.checkBoundaries(
+                    document.querySelector(`#row${y} #col${x}`)
+                );
+            case "d":
+                self.y;
+                self.x + 1;
+                return self.checkBoundaries(
+                    document.querySelector(`#row${y} #col${x}`)
+                );
+        }
+    }
+    function checkBoundaries(cell) {
+        const boundaries = ["wall", "enemy", "player"];
+        return boundaries.includes(cell.getAttribute("class"));
+    }
+    
     window.addEventListener('keydown', function (e) {
             console.log(e.key)
             if (e.key == 'w') {
