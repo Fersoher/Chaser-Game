@@ -52,11 +52,12 @@ tr {
     background-image: url(./assets/tanks\(2\).png);
     background-repeat: no-repeat;
     background-size: 4vh
-    
 
 }
 .bullet {
+
     width: 5px;
     height: 5px;
     background-color: black;
+
 }

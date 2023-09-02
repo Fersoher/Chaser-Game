@@ -1,7 +1,7 @@
 import { Player } from "./player.js";
 import { Enemy } from "./Enemy.js"
 import { Bullet } from "./bullet.js"
-// Creación del tablero
+
 var player1 = new Player(10, 19)
 var enemy1 = new Enemy(10, 3)
 
@@ -80,12 +80,14 @@ window.addEventListener('keydown', function (e) {
     
     }
     if (e.key == ' ') {
-        var bullet = new Bullet(player1)
-        bullet.createShoot(player1)
-        
+        var bullet = new Bullet(player1,enemy1)
+        bullet.createShoot()
     }
-
+    
 })
 
-
-setInterval(enemy1.moveEnemy, 500)
+function gameLoop(){
+    enemy1.moveEnemy()
+    
+}
+setInterval(gameLoop, 500)

@@ -3,31 +3,21 @@ function Enemy(x, y) {
     this.y = y
     this.direction = ''
     var self = this
+    this.alive = true
 
-    setInterval(self.randomMove,100)
-
-    
-    
-    
-    this.randomMove = function() {
+    this.randomMove = function () {
+       
         var move = ["up", "left", "right", "down"]
-        this.direction = move[Math.floor(Math.random()*4)]
-        
-        
-    }
-
-
-
-
+        this.direction = move[Math.floor(Math.random() * 4)]
     
-
-
+    }
     this.moveEnemy = function () {
+         if (self.alive === true) {
         self.randomMove()
         switch (self.direction) {
             case 'up':
                 if (checkBoundaries(document.querySelector(`#row${self.y - 1} #col${self.x}`))) {
-                    
+
                 } else {
                     self.y--
                 }
@@ -53,9 +43,13 @@ function Enemy(x, y) {
                     self.x++
                 }
                 break
-        }
+        } 
+        } else {
+            document.querySelector(`#row${self.y} #col${self.x}`)
+    }
         self.erase()
         self.drawEnemy();
+
     }
     this.drawEnemy = function () {
         var enemyCell = document.querySelector(`#row${this.y} #col${this.x}`)
@@ -101,8 +95,10 @@ function Enemy(x, y) {
     }
 
 
-
 }
+
+
+
 
 
 
