@@ -1,7 +1,7 @@
 function Player(x, y) {
     this.x = x
     this.y = y
-    this.direction = ''
+    this.direction = 'up'
     var self = this
 
 
