@@ -4,8 +4,8 @@ import { Bullet } from "./bullet.js"
 // Creación del tablero
 var player1 = new Player(10, 19)
 var enemy1 = new Enemy(10, 3)
-var game = {
-    createBoard() {
+
+     function createBoard() {
         var obstacles = [];
         var table = document.getElementById("board");
         boundMap.forEach((row, i) => {
@@ -27,7 +27,7 @@ var game = {
         enemy1.drawEnemy()
         // enemy.showEnemy();
     }
-}
+
 
 
 
@@ -56,12 +56,12 @@ let boundMap = [
     ['-', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', '-', ' ', '-'],
     ['-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-'],
 ]
-game.createBoard()
+
+createBoard()
 
 // Creación de colisiones y movimientos
 
 window.addEventListener('keydown', function (e) {
-    console.log(e.key)
     if (e.key == 'w') {
         player1.direction = "up"
         player1.movePlayer()
