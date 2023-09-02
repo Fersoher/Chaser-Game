@@ -35,6 +35,7 @@ function Bullet(player, enemy) {
                     document.querySelector(`#row${this.y} #col${this.x}`).classList.add("bullet")
                     this.cells.push(document.querySelector(`#row${this.y} #col${this.x}`))
                 }
+                
                 break
             case 'down':
                 this.y = player.y + 1
