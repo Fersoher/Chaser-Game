@@ -3,10 +3,11 @@ function Player(x, y) {
     this.y = y
     this.direction = 'up'
     var self = this
-    
+    this.alive = true
 
 
     this.movePlayer = function () {
+        if (self.alive === true) {
         switch (self.direction) {
             case 'up':               
 
@@ -38,6 +39,10 @@ function Player(x, y) {
                     self.x++
                 }
                 break
+            }
+            } else {
+                document.querySelector(`#row${self.y} #col${self.x}`)
+            
         }
         self.erase()
         self.drawPlayer();

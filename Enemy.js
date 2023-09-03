@@ -1,52 +1,57 @@
 function Enemy(x, y) {
+
     this.x = x
     this.y = y
     this.direction = ''
     var self = this
     this.alive = true
 
+
     this.randomMove = function () {
-       
+
         var move = ["up", "left", "right", "down"]
         this.direction = move[Math.floor(Math.random() * 4)]
-    
+
     }
     this.moveEnemy = function () {
-         if (self.alive === true) {
-        self.randomMove()
-        switch (self.direction) {
-            case 'up':
-                if (checkBoundaries(document.querySelector(`#row${self.y - 1} #col${self.x}`))) {
+        if (self.alive === true) {
 
-                } else {
-                    self.y--
-                }
-                break
-            case 'left':
-                if (checkBoundaries(document.querySelector(`#row${self.y} #col${self.x - 1}`))) {
+            self.randomMove()
+            switch (self.direction) {
+                case 'up':
+                    if (checkBoundaries(document.querySelector(`#row${self.y - 1} #col${self.x}`))) {
 
-                } else {
-                    self.x--
-                }
-                break
-            case 'down':
-                if (checkBoundaries(document.querySelector(`#row${self.y + 1} #col${self.x}`))) {
+                    } else {
+                        self.y--
+                    }
+                    break
+                case 'left':
+                    if (checkBoundaries(document.querySelector(`#row${self.y} #col${self.x - 1}`))) {
 
-                } else {
-                    self.y++
-                }
-                break
-            case 'right':
-                if (checkBoundaries(document.querySelector(`#row${self.y} #col${self.x + 1}`))) {
+                    } else {
+                        self.x--
+                    }
+                    break
+                case 'down':
+                    if (checkBoundaries(document.querySelector(`#row${self.y + 1} #col${self.x}`))) {
 
-                } else {
-                    self.x++
-                }
-                break
-        } 
+                    } else {
+                        self.y++
+                    }
+                    break
+                case 'right':
+                    if (checkBoundaries(document.querySelector(`#row${self.y} #col${self.x + 1}`))) {
+
+                    } else {
+                        self.x++
+                    }
+                    break
+
+            }
+            
         } else {
             document.querySelector(`#row${self.y} #col${self.x}`)
-    }
+        }
         self.erase()
         self.drawEnemy();
 
@@ -97,19 +102,5 @@ function Enemy(x, y) {
 
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
 export { Enemy }
-
 

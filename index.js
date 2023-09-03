@@ -1,6 +1,7 @@
 import { Player } from "./player.js";
 import { Enemy } from "./Enemy.js"
 import { Bullet } from "./bullet.js"
+import { Enemybullet } from "./Enemybullet.js"
 
 var player1 = new Player(10, 19)
 var enemy1 = new Enemy(10, 3)
@@ -87,7 +88,10 @@ window.addEventListener('keydown', function (e) {
 })
 
 function gameLoop(){
+    var enemyBullet = new Enemybullet(player1,enemy1)
     enemy1.moveEnemy()
-    
+    if (enemy1.alive === true) {
+    enemyBullet.createShoot()
+   }
 }
 setInterval(gameLoop, 500)
