@@ -42,7 +42,8 @@ tr {
     height: 20px;
     background-image: url(./assets/tanks\(4\).png);
     background-repeat: no-repeat;
-    background-size: 4vh
+    background-size: 4vh;
+    transform : rotate(180deg)
 }
 
 .enemy {

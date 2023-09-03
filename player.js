@@ -3,20 +3,21 @@ function Player(x, y) {
     this.y = y
     this.direction = 'up'
     var self = this
+    
 
 
     this.movePlayer = function () {
         switch (self.direction) {
-            case 'up':
+            case 'up':               
+
                 if (checkBoundaries(document.querySelector(`#row${self.y - 1} #col${self.x}`))) {
-                    console.log("cant move")
-                } else {
-                    self.y--
+                } else {                              
+                    self.y--                   
                 }
                 break
             case 'left':
-                if (checkBoundaries(document.querySelector(`#row${self.y} #col${self.x - 1}`))) {
 
+                if (checkBoundaries(document.querySelector(`#row${self.y} #col${self.x - 1}`))) {
                 } else {
                     self.x--
                 }
@@ -25,7 +26,9 @@ function Player(x, y) {
                 if (checkBoundaries(document.querySelector(`#row${self.y + 1} #col${self.x}`))) {
 
                 } else {
+                    
                     self.y++
+                    
                 }
                 break
             case 'right':
