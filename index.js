@@ -7,7 +7,7 @@ var player1 = new Player(10, 19)
 var enemy1 = new Enemy(10, 3)
 var enemy2 = new Enemy(4, 6)
 var enemy3 = new Enemy(14, 5)
-const audio = new Audio("https://manzdev.github.io/codevember2017/assets/eye-tiger.mp3");
+const audio = new Audio("assets/Density & Time - MAZE.mp3");
 audio.play();
      function createBoard() {
        

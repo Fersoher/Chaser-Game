@@ -70,7 +70,7 @@ tr {
 #start button {
     background-image: url(./assets/defi_start_button.png);
     background-size: 100%;
-
+    cursor: pointer;
     height: 17vh;
     width: 25vw;
     border: none;
@@ -85,7 +85,7 @@ tr {
 }
 
 #start {
-    
+
     background-size: 100%;
     background-image: url(./assets/chasre_walpp.png);
     height: 90vh;
