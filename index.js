@@ -7,8 +7,10 @@ var player1 = new Player(10, 19)
 var enemy1 = new Enemy(10, 3)
 var enemy2 = new Enemy(4, 6)
 var enemy3 = new Enemy(14, 5)
-
+const audio = new Audio("https://manzdev.github.io/codevember2017/assets/eye-tiger.mp3");
+audio.play();
      function createBoard() {
+       
         var obstacles = [];
         var table = document.getElementById("board");
         boundMap.forEach((row, i) => {
@@ -112,6 +114,7 @@ function gameLoop(){
 }
 
 function interval() {
+    
     document.querySelector("#start button")
     let startButton = document.querySelector("#start button");
     startButton.onclick = function () {

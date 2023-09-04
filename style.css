@@ -80,9 +80,12 @@ tr {
     align-items: center;
     display: flex;
     top: 60%;
+
+
 }
 
 #start {
+    
     background-size: 100%;
     background-image: url(./assets/chasre_walpp.png);
     height: 90vh;
@@ -93,6 +96,7 @@ tr {
     background-repeat: no-repeat;
     top: 5%;
     left: 5%;
-
+    transition: opacity;
+    filter: blur(10px);
 
 }
