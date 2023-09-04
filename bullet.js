@@ -1,4 +1,4 @@
-function Bullet(player, enemy) {
+function Bullet(player, enemy1 ,enemy2 ,enemy3) {
     this.y = null
     this.x = null
     this.direction = player.direction
@@ -23,10 +23,7 @@ function Bullet(player, enemy) {
                         document.querySelector(`#row${this.y} #col${this.x}`).classList.add("bullet")
                         this.cells.push(document.querySelector(`#row${this.y} #col${this.x}`))
                         console.log("enemy hit")
-                        enemy.alive = false
-                        console.log(enemy.alive)
                     }
-                
                 }
                 
                 break
@@ -40,8 +37,7 @@ function Bullet(player, enemy) {
                         document.querySelector(`#row${this.y} #col${this.x}`).classList.add("bullet")
                         this.cells.push(document.querySelector(`#row${this.y} #col${this.x}`))
                         console.log("enemy hit")
-                        enemy.alive = false
-                        console.log(enemy.health)
+                        
                     }
                 }
                 
@@ -56,8 +52,7 @@ function Bullet(player, enemy) {
                         document.querySelector(`#row${this.y} #col${this.x}`).classList.add("bullet")
                         this.cells.push(document.querySelector(`#row${this.y} #col${this.x}`))
                         console.log("enemy hit")
-                        enemy.alive = false
-                        console.log(enemy.health)
+                       
                     }
                 }
                 break
@@ -71,8 +66,7 @@ function Bullet(player, enemy) {
                         document.querySelector(`#row${this.y} #col${this.x}`).classList.add("bullet")
                         this.cells.push(document.querySelector(`#row${this.y} #col${this.x}`))
                         console.log("enemy hit")
-                        enemy.alive = false
-                        console.log(enemy.health)
+                        
                     }
                 }
                 break

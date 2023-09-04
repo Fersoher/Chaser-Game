@@ -6,7 +6,12 @@ function Enemy(x, y) {
     var self = this
     this.alive = true
 
-
+    this.checkBullet = function () {
+        var position = (document.querySelector(`#row${self.y} #col${self.x}`))
+        if (position.classList.contains("bullet")) {
+            this.alive = false
+        }
+    }
     this.randomMove = function () {
 
         var move = ["up", "left", "right", "down"]
@@ -14,6 +19,7 @@ function Enemy(x, y) {
 
     }
     this.moveEnemy = function () {
+        this.checkBullet()
         if (self.alive === true) {
 
             self.randomMove()

@@ -84,9 +84,8 @@ window.addEventListener('keydown', function (e) {
     
     }
     if (e.key == ' ') {
-        var bullet = new Bullet(player1,enemy1)
-        var bullet = new Bullet(player1,enemy2)
-        var bullet = new Bullet(player1,enemy3)
+        var bullet = new Bullet(player1, enemy1 ,enemy2 ,enemy3)
+        
 
         bullet.createShoot()
     }
@@ -109,6 +108,7 @@ function gameLoop(){
    if (enemy3.alive === true) {
     enemyBullet3.createShoot()
    }
+
 }
 
 
