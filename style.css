@@ -19,17 +19,17 @@
 }
 
 td {
-
-    width: 20px;
-    height: 20px;
+    position: relative;
+    width: 4vw;
+    height: 4vh;
     background-image: url(./assets/Grey_Brick.webp);
     background-size: 100%;
 }
 
 tr {
-
-    width: 20px;
-    height: 20px;
+    position: relative;
+    width: 4vw;
+    height: 4vh;
 }
 
 .wall {
@@ -58,13 +58,11 @@ tr {
 
 }
 .bullet {
-
-    width: 5px;
-    height: 5px;
-    background-image: url(./assets/ally_bullet_1.png);
+    
+    z-index: 1;
+    background-image: url(./assets/bubble-removebg-preview.png);
     background-repeat: no-repeat;
-    background-size: 5vh;
-    margin: 0;
+    margin: 0 auto ;
 
 }
 #start button {
