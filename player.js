@@ -7,38 +7,46 @@ function Player(x, y) {
 
 
     this.movePlayer = function () {
+        var lastX = this.x
+        var lastY = this.y
         
-        if (self.alive === true) {
-            
-            switch (self.direction) {
-                
-                
+        if (self.alive === true) {   
+            switch (self.direction) {  
                 case 'up':   
+                    
                     if (checkBoundaries(document.querySelector(`#row${self.y - 1} #col${self.x}`))) {
-                    } else { 
+                        lastY = this.y-1
+
+                    } else {    
                         self.y--
+                        document.querySelector(`#row${self.y} #col${self.x}`).style.transform= "rotate(180deg)"
+                        
                                                 
                     }
                     break
                 case 'left':
 
                     if (checkBoundaries(document.querySelector(`#row${self.y} #col${self.x - 1}`))) {
+                        lastX = this.x-1
                     } else {
                         self.x--
+                        document.querySelector(`#row${self.y} #col${self.x}`).style.transform= "rotate(90deg)"
                     }
                     break
                 case 'down':
                     if (checkBoundaries(document.querySelector(`#row${self.y + 1} #col${self.x}`))) {
-
+                        lastY = this.y+1
                     } else {                   
-                        self.y++                   
+                        self.y++
+                        document.querySelector(`#row${self.y} #col${self.x}`).style.transform= "rotate(0deg)"                   
                     }
                     break
                 case 'right':
                     if (checkBoundaries(document.querySelector(`#row${self.y} #col${self.x + 1}`))) {
-
+                        lastX = this.x+1
                     } else {
                         self.x++
+                        document.querySelector(`#row${self.y} #col${self.x}`).style.transform= "rotate(270deg)"
                     }
                     break
                 }
@@ -46,17 +54,18 @@ function Player(x, y) {
                     document.querySelector(`#row${self.y} #col${self.x}`)
                 
             }
-        self.erase()
-        this.style()       
+        self.erase(lastY,lastX)
+        //this.style()       
         self.drawPlayer()
     }
     this.drawPlayer = function () {
         var playerCell = document.querySelector(`#row${this.y} #col${this.x}`)
         playerCell.classList.add("player")
     }
-    this.erase = function () {
-        var playerCell = document.querySelector(`#row${this.y} #col${this.x}`)
+    this.erase = function (lastY,lastX) {
+        var playerCell = document.querySelector(".player")
         playerCell.classList.remove('player')
+        document.querySelector(`#row${lastY} #col${lastX}`).style.removeProperty("transform")
         //document.querySelector(`#row${self.y} #col${self.x}`).style.transform = "rotate(0deg)"
     }
 
@@ -96,7 +105,7 @@ function Player(x, y) {
         return cell.getAttribute("class") === "wall" || cell.getAttribute("class") === "enemy";
     }
 
-    this.style = function () {
+   /* this.style = function () {
         var pixel = document.querySelector(".player")
         switch (self.direction) {
           case "up":
@@ -112,7 +121,7 @@ function Player(x, y) {
             pixel.style.backgroundImage ="url(./assets/tanksPlayerLeft.png)";
             break;
         }
-    }
+    }*/
 
  
 

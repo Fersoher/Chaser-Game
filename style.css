@@ -45,6 +45,7 @@ tr {
     background-image: url(./assets/tanksPlayerDown.png);
     background-repeat: no-repeat;
     background-size: 4vh;
+    transform: rotate(0deg)
 }
 
 
