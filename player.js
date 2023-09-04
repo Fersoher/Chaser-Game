@@ -7,53 +7,57 @@ function Player(x, y) {
 
 
     this.movePlayer = function () {
+        
         if (self.alive === true) {
-        switch (self.direction) {
-            case 'up':               
-
-                if (checkBoundaries(document.querySelector(`#row${self.y - 1} #col${self.x}`))) {
-                } else {                              
-                    self.y--                   
-                }
-                break
-            case 'left':
-
-                if (checkBoundaries(document.querySelector(`#row${self.y} #col${self.x - 1}`))) {
-                } else {
-                    self.x--
-                }
-                break
-            case 'down':
-                if (checkBoundaries(document.querySelector(`#row${self.y + 1} #col${self.x}`))) {
-
-                } else {
-                    
-                    self.y++
-                    
-                }
-                break
-            case 'right':
-                if (checkBoundaries(document.querySelector(`#row${self.y} #col${self.x + 1}`))) {
-
-                } else {
-                    self.x++
-                }
-                break
-            }
-            } else {
-                document.querySelector(`#row${self.y} #col${self.x}`)
             
-        }
+            switch (self.direction) {
+                
+                
+                case 'up':   
+                    if (checkBoundaries(document.querySelector(`#row${self.y - 1} #col${self.x}`))) {
+                    } else { 
+                        self.y--
+                                                
+                    }
+                    break
+                case 'left':
+
+                    if (checkBoundaries(document.querySelector(`#row${self.y} #col${self.x - 1}`))) {
+                    } else {
+                        self.x--
+                    }
+                    break
+                case 'down':
+                    if (checkBoundaries(document.querySelector(`#row${self.y + 1} #col${self.x}`))) {
+
+                    } else {                   
+                        self.y++                   
+                    }
+                    break
+                case 'right':
+                    if (checkBoundaries(document.querySelector(`#row${self.y} #col${self.x + 1}`))) {
+
+                    } else {
+                        self.x++
+                    }
+                    break
+                }
+                } else {
+                    document.querySelector(`#row${self.y} #col${self.x}`)
+                
+            }
         self.erase()
-        self.drawPlayer();
+        this.style()       
+        self.drawPlayer()
     }
     this.drawPlayer = function () {
         var playerCell = document.querySelector(`#row${this.y} #col${this.x}`)
         playerCell.classList.add("player")
     }
     this.erase = function () {
-        var playerCell = document.querySelector('.player')
+        var playerCell = document.querySelector(`#row${this.y} #col${this.x}`)
         playerCell.classList.remove('player')
+        //document.querySelector(`#row${self.y} #col${self.x}`).style.transform = "rotate(0deg)"
     }
 
 
@@ -92,12 +96,27 @@ function Player(x, y) {
         return cell.getAttribute("class") === "wall" || cell.getAttribute("class") === "enemy";
     }
 
+    this.style = function () {
+        var pixel = document.querySelector(".player")
+        switch (self.direction) {
+          case "up":
+            pixel.style.backgroundImage ="url(./assets/tanksPlayerUp.png)";
+            break;
+          case "right":
+            pixel.style.backgroundImage ="url(./assets/tanksPlayerRight.png)";
+            break;
+          case "down":
+            pixel.style.backgroundImage ="url(./assets/tanksPlayerDown.png)";
+            break;
+          case "left":
+            pixel.style.backgroundImage ="url(./assets/tanksPlayerLeft.png)";
+            break;
+        }
+    }
 
+ 
 
 }
-
-
-
 
 
 
