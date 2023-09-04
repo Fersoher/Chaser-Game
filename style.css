@@ -42,7 +42,7 @@ tr {
 .player{
     width: 20px;
     height: 20px;
-    background-image: url(./assets/tanks\(4\).png);
+    background-image: url(./assets/tankdown.png);
     background-repeat: no-repeat;
     background-size: 4vh;
 }
