@@ -13,18 +13,20 @@
     margin: auto;
     background-color: rgb(194, 245, 252);
     background-image: url(./assets/Grey_Brick.webp);
-    background-size: 4vh
-    
+    background-size: 4vh;
+
 }
 
 td {
-    border: black 0.1px solid;
+
     width: 20px;
     height: 20px;
+    background-image: url(./assets/Grey_Brick.webp);
+    background-size: 100%;
 }
 
 tr {
-    border: black 2px solid;
+
     width: 20px;
     height: 20px;
 }
@@ -33,8 +35,8 @@ tr {
     background-color: grey;
     background-image: url(./assets/Grey_Block.webp);
     background-repeat: no-repeat;
-    background-size: 4vh
-    
+    background-size: 4vh;
+
 }
 
 .player{
@@ -43,22 +45,24 @@ tr {
     background-image: url(./assets/tanks\(4\).png);
     background-repeat: no-repeat;
     background-size: 4vh;
-    transform : rotate(180deg)
 }
 
 .enemy {
-   
+
     width: 20px;
     height: 20px;
     background-image: url(./assets/tanks\(2\).png);
-    background-repeat: no-repeat;
-    background-size: 4vh
+    background-repeat:inherit;
+    background-size: 4vh;
 
 }
 .bullet {
 
     width: 5px;
     height: 5px;
-    background-color: black;
+    background-image: url(./assets/ally_bullet_1.png);
+    background-repeat: no-repeat;
+    background-size: 5vh;
+    margin: 0;
 
 }

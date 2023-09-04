@@ -61,7 +61,13 @@ function Enemy(x, y) {
         enemyCell.classList.add("enemy")
     }
     this.erase = function () {
-        var enemyCell = document.querySelector('.enemy')
+        var enemyCell = document.querySelector(`#row${this.y-1} #col${this.x}`)
+        enemyCell.classList.remove('enemy')
+        var enemyCell = document.querySelector(`#row${this.y+1} #col${this.x}`)
+        enemyCell.classList.remove('enemy')
+        var enemyCell = document.querySelector(`#row${this.y} #col${this.x-1}`)
+        enemyCell.classList.remove('enemy')
+        var enemyCell = document.querySelector(`#row${this.y} #col${this.x+1}`)
         enemyCell.classList.remove('enemy')
     }
 

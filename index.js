@@ -5,6 +5,8 @@ import { Enemybullet } from "./Enemybullet.js"
 
 var player1 = new Player(10, 19)
 var enemy1 = new Enemy(10, 3)
+var enemy2 = new Enemy(4, 6)
+var enemy3 = new Enemy(14, 5)
 
      function createBoard() {
         var obstacles = [];
@@ -26,7 +28,8 @@ var enemy1 = new Enemy(10, 3)
 
         player1.drawPlayer();
         enemy1.drawEnemy()
-        // enemy.showEnemy();
+        enemy2.drawEnemy()
+        enemy3.drawEnemy()
     }
 
 
@@ -82,16 +85,31 @@ window.addEventListener('keydown', function (e) {
     }
     if (e.key == ' ') {
         var bullet = new Bullet(player1,enemy1)
+        var bullet = new Bullet(player1,enemy2)
+        var bullet = new Bullet(player1,enemy3)
+
         bullet.createShoot()
     }
     
 })
 
 function gameLoop(){
-    var enemyBullet = new Enemybullet(player1,enemy1)
+    var enemyBullet1 = new Enemybullet(player1,enemy1)
+    var enemyBullet2 = new Enemybullet(player1,enemy2)
+    var enemyBullet3 = new Enemybullet(player1,enemy3)
     enemy1.moveEnemy()
+    enemy2.moveEnemy()
+    enemy3.moveEnemy()
     if (enemy1.alive === true) {
-    enemyBullet.createShoot()
+    enemyBullet1.createShoot()
+   }
+   if (enemy2.alive === true) {
+    enemyBullet2.createShoot()
+   }
+   if (enemy3.alive === true) {
+    enemyBullet3.createShoot()
    }
 }
+
+
 setInterval(gameLoop, 500)
