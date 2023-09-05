@@ -175,7 +175,7 @@ table {
 #game-over {
     display: none;
     background-size: 100%;
-    background-image: url(./assets/chasre_walpp.png);
+    background-image: url(./assets/gameOverWallpaper.gif);
     height: 100%;
     width: 100%;
     border: none;
