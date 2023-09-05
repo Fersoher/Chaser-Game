@@ -21,15 +21,14 @@
 td {
     position: relative;
     width: 4vw;
-    height: 4vh;
-    
+    height: 4vh; 
     background-size: 100%;
 }
 
 tr {
-    position: relative;
-    width: 4vw;
-    height: 4vh;
+
+    width: 20px;
+    height: 20px;
 }
 
 .wall {
@@ -66,6 +65,27 @@ tr {
     background-image: url("./assets/tankright.png"), url(./assets/Grey_Brick.webp);
 }
 
+.up {
+    background-image: url("./assets/tankup.png"), url(./assets/Grey_Brick.webp);
+}
+
+
+.down {
+    background-image: url("./assets/tankdown.png"), url(./assets/Grey_Brick.webp);
+}
+
+
+.left {
+    background-image: url("./assets/tankleft.png"), url(./assets/Grey_Brick.webp);
+}
+
+
+.right {
+    background-image: url("./assets/tankright.png"), url(./assets/Grey_Brick.webp);
+}
+
+
+
 .enemy {
 
     width: 20px;
@@ -75,12 +95,33 @@ tr {
     background-size: 4vh;
 
 }
+
+.upenemy {
+    background-image: url("./assets/enemyUp.png"), url(./assets/Grey_Brick.webp);
+}
+
+
+.downenemy {
+    background-image: url("./assets/enemyDown.png"), url(./assets/Grey_Brick.webp);
+}
+
+
+.leftenemy {
+    background-image: url("./assets/enemyLeft.png"), url(./assets/Grey_Brick.webp);
+}
+
+
+.rightenemy {
+    background-image: url("./assets/enemyRight.png"), url(./assets/Grey_Brick.webp);
+}
 .bullet {
-    
-    z-index: 1;
-    background-image: url(./assets/bubble-removebg-preview.png);
+
+    width: 5px;
+    height: 5px;
+    background-image: url(./assets/ally_bullet_1.png);
     background-repeat: no-repeat;
-    margin: 0 auto ;
+    background-size: 5vh;
+    margin: 0;
 
 }
 #start button {
