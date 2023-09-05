@@ -8,9 +8,9 @@ var enemy1 = new Enemy(10, 3)
 var enemy2 = new Enemy(4, 6)
 var enemy3 = new Enemy(14, 5)
 const audio = new Audio("assets/Density & Time - MAZE.mp3");
-
+audio.play();
      function createBoard() {
-       audio.play();
+       
         var obstacles = [];
         var table = document.getElementById("board");
         boundMap.forEach((row, i) => {
@@ -27,7 +27,7 @@ const audio = new Audio("assets/Density & Time - MAZE.mp3");
             });
             table.appendChild(tr);
         });
-        
+
         player1.drawPlayer();
         enemy1.drawEnemy()
         enemy2.drawEnemy()
@@ -114,7 +114,7 @@ function gameLoop(){
 }
 
 function interval() {
-   
+    
     document.querySelector("#start button")
     let startButton = document.querySelector("#start button");
     startButton.onclick = function () {

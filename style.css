@@ -19,17 +19,17 @@
 }
 
 td {
-    position: relative;
-    width: 4vw;
-    height: 4vh;
+
+    width: 20px;
+    height: 20px;
     background-image: url(./assets/Grey_Brick.webp);
     background-size: 100%;
 }
 
 tr {
-    position: relative;
-    width: 4vw;
-    height: 4vh;
+
+    width: 20px;
+    height: 20px;
 }
 
 .wall {
@@ -98,11 +98,13 @@ tr {
     background-image: url("./assets/enemyRight.png"), url(./assets/Grey_Brick.webp);
 }
 .bullet {
-    
-    z-index: 1;
-    background-image: url(./assets/bubble-removebg-preview.png);
+
+    width: 5px;
+    height: 5px;
+    background-image: url(./assets/ally_bullet_1.png);
     background-repeat: no-repeat;
-    margin: 0 auto ;
+    background-size: 5vh;
+    margin: 0;
 
 }
 #start button {
