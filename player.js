@@ -48,7 +48,7 @@ function Player(x, y) {
             function tankgif() {
 
                 document.querySelector("#game-over").style.display = "none"
-                document.querySelector(".tankgif").style.display = "block"
+                document.querySelector(".tankgif").style.display = "flex"
                 document.querySelector("#board").style.display = "none"
             }
 
