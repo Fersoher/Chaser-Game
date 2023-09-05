@@ -17,11 +17,11 @@ function Enemybullet(player, enemy) {
                 var bulletCell = document.querySelector(`#row${this.y} #col${this.x}`)
                 console.log(bulletCell)
                 for (this.y; !document.querySelector(`#row${this.y} #col${this.x}`).classList.contains('wall'); this.y--) {
-                    document.querySelector(`#row${this.y} #col${this.x}`).classList.add("bullet")
+                    document.querySelector(`#row${this.y} #col${this.x}`).classList.add("bulletEnemyVer")
                     this.cells.push(document.querySelector(`#row${this.y} #col${this.x}`))
                     console.log("pium")
                     if (document.querySelector(`#row${this.y} #col${this.x}`).classList.contains('player')) {
-                        document.querySelector(`#row${this.y} #col${this.x}`).classList.add("bullet")
+                        document.querySelector(`#row${this.y} #col${this.x}`).classList.add("bulletEnemyVer")
                         this.cells.push(document.querySelector(`#row${this.y} #col${this.x}`))
                         console.log("player hit")
                         player.alive = false
@@ -35,10 +35,10 @@ function Enemybullet(player, enemy) {
                 this.x = enemy.x - 1
                 var bulletCell = document.querySelector(`#row${this.y} #col${this.x}`)
                 for (this.y; !document.querySelector(`#row${this.y} #col${this.x}`).classList.contains('wall'); this.x--) {
-                    document.querySelector(`#row${this.y} #col${this.x}`).classList.add("bullet")
+                    document.querySelector(`#row${this.y} #col${this.x}`).classList.add("bulletEnemyHor")
                     this.cells.push(document.querySelector(`#row${this.y} #col${this.x}`))
                     if (document.querySelector(`#row${this.y} #col${this.x}`).classList.contains('player')) {
-                        document.querySelector(`#row${this.y} #col${this.x}`).classList.add("bullet")
+                        document.querySelector(`#row${this.y} #col${this.x}`).classList.add("bulletEnemyHor")
                         this.cells.push(document.querySelector(`#row${this.y} #col${this.x}`))
                         console.log("player hit")
                         player.alive = false
@@ -51,10 +51,10 @@ function Enemybullet(player, enemy) {
                 this.y = enemy.y + 1
                 var bulletCell = document.querySelector(`#row${this.y} #col${this.x}`)
                 for (this.y; !document.querySelector(`#row${this.y} #col${this.x}`).classList.contains('wall'); this.y++) {
-                    document.querySelector(`#row${this.y} #col${this.x}`).classList.add("bullet")
+                    document.querySelector(`#row${this.y} #col${this.x}`).classList.add("bulletEnemyVer")
                     this.cells.push(document.querySelector(`#row${this.y} #col${this.x}`))
                     if (document.querySelector(`#row${this.y} #col${this.x}`).classList.contains('player')) {
-                        document.querySelector(`#row${this.y} #col${this.x}`).classList.add("bullet")
+                        document.querySelector(`#row${this.y} #col${this.x}`).classList.add("bulletEnemyVer")
                         this.cells.push(document.querySelector(`#row${this.y} #col${this.x}`))
                         console.log("player hit")
                         player.alive = false
@@ -66,10 +66,10 @@ function Enemybullet(player, enemy) {
                 this.x = enemy.x + 1
                 var bulletCell = document.querySelector(`#row${this.y} #col${this.x}`)
                 for (this.y; !document.querySelector(`#row${this.y} #col${this.x}`).classList.contains('wall'); this.x++) {
-                    document.querySelector(`#row${this.y} #col${this.x}`).classList.add("bullet")
+                    document.querySelector(`#row${this.y} #col${this.x}`).classList.add("bulletEnemyHor")
                     this.cells.push(document.querySelector(`#row${this.y} #col${this.x}`))
                     if (document.querySelector(`#row${this.y} #col${this.x}`).classList.contains('player')) {
-                        document.querySelector(`#row${this.y} #col${this.x}`).classList.add("bullet")
+                        document.querySelector(`#row${this.y} #col${this.x}`).classList.add("bulletEnemyHor")
                         this.cells.push(document.querySelector(`#row${this.y} #col${this.x}`))
                         console.log("player hit")
                         player.alive = false
@@ -81,7 +81,8 @@ function Enemybullet(player, enemy) {
         setTimeout(this.erase, 200)
     }
     this.erase = function () {
-        self.cells.forEach(element => { element.classList.remove("bullet") })
+        self.cells.forEach(element => { element.classList.remove("bulletEnemyHor") })
+        self.cells.forEach(element => { element.classList.remove("bulletEnemyVer") })
         this.cells = []
     }
 

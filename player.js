@@ -42,12 +42,12 @@ function Player(x, y) {
                     }
                     break
             }
-        } else {
-            document.querySelector(`#row${self.y} #col${self.x}`)
 
-        }
-        self.erase()
+            self.erase()
         self.drawPlayer();
+        }
+
+        
     }
     this.drawPlayer = function () {
         var playerCell = document.querySelector(`#row${this.y} #col${this.x}`)
@@ -103,7 +103,7 @@ function Player(x, y) {
     }
     function checkBoundaries(cell) {
         //const boundaries = ["wall", "enemy", "player"];
-        return cell.getAttribute("class") === "wall" || cell.getAttribute("class") === "enemy";
+        return cell.classList.contains('wall') || cell.classList.contains("enemy")
     }
 
 

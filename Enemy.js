@@ -1,5 +1,4 @@
-function Enemy(x, y) {
-
+function Enemy(x,y) {
     this.x = x
     this.y = y
     this.direction = 'downenemy'
@@ -7,8 +6,8 @@ function Enemy(x, y) {
     this.alive = true
 
     this.checkBullet = function () {
-        var position = (document.querySelector(`#row${self.y} #col${self.x}`))
-        if (position.classList.contains("bullet")) {
+        var position = (document.querySelector(`#row${this.y} #col${this.x}`))
+        if (position.classList.contains("bulletVer")||position.classList.contains("bulletHor")) {
             this.alive = false
         }
     }
@@ -21,7 +20,7 @@ function Enemy(x, y) {
     this.moveEnemy = function () {
         this.checkBullet()
         if (self.alive === true) {
-
+            
             var x = self.x
             var y = self.y
 
@@ -88,31 +87,23 @@ function Enemy(x, y) {
                 self.y - 1;
                 self.x;
                 return self.checkBoundaries(cell)
-                document.querySelector(`#row${y} #col${x}`)
-                    ;
             case "leftenemy":
                 self.y;
                 self.x - 1;
                 return self.checkBoundaries(cell)
-                document.querySelector(`#row${y} #col${x}`)
-                    ;
             case "downenemy":
                 self.y + 1;
                 self.x;
                 return self.checkBoundaries(cell)
-                document.querySelector(`#row${y} #col${x}`)
-                    ;
             case "rightenemy":
                 self.y;
                 self.x + 1;
                 return self.checkBoundaries(cell)
-                document.querySelector(`#row${y} #col${x}`)
-                    ;
         }
     }
     function checkBoundaries(cell) {
         //const boundaries = ["wall", "enemy", "enemy"];
-        return cell.getAttribute("class") === "wall" || cell.getAttribute("class") === "player";
+       return cell.classList.contains('wall') || cell.classList.contains("enemy") || cell.classList.contains("player")
     }
 
 

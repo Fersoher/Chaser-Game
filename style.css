@@ -73,8 +73,8 @@ tr {
 
     width: 20px;
     height: 20px;
-    background-image: url(./assets/tanks\(2\).png);
-    background-repeat: inherit ;
+    background-image: url(./assets/enemyDown.png);
+    background-repeat:  no-repeat ;
     background-size: 4vh;
 
 }
@@ -97,11 +97,48 @@ tr {
 .rightenemy {
     background-image: url("./assets/enemyRight.png"), url(./assets/Grey_Brick.webp);
 }
-.bullet {
+/*.bullet {
 
     width: 5px;
     height: 5px;
-    background-image: url(./assets/ally_bullet_1.png);
+    background-image: url(./assets/bulletVer.png);
+    background-repeat: no-repeat;
+    background-size: 5vh;
+    margin: 0;
+
+}*/
+
+.bulletHor {
+    background-image: url("./assets/bulletHor.png");
+    background-repeat: no-repeat;
+    background-size: 5vh;
+    margin: 0;
+}
+
+
+.bulletVer {
+    background-image: url("./assets/bulletVer.png");
+    background-repeat: no-repeat;
+    background-size: 5vh;
+    margin: 0;
+}
+
+
+
+.bulletEnemyHor {
+    width: 5px;
+    height: 5px;
+    background-image: url(./assets/bulletEnemyHor.png);
+    background-repeat: no-repeat;
+    background-size: 5vh;
+    margin: 0;
+
+}
+
+.bulletEnemyVer {
+    width: 5px;
+    height: 5px;
+    background-image: url(./assets/bulletEnemyVer.png);
     background-repeat: no-repeat;
     background-size: 5vh;
     margin: 0;

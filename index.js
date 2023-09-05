@@ -86,30 +86,45 @@ window.addEventListener('keydown', function (e) {
     
     }
     if (e.key == ' ') {
-        var bullet = new Bullet(player1, enemy1 ,enemy2 ,enemy3)
+
+        if (player1.alive){
+            var bullet = new Bullet(player1)
+            bullet.createShoot()
+        }
         
 
-        bullet.createShoot()
+        
+
+        
     }
     
 })
 
 function gameLoop(){
-    var enemyBullet1 = new Enemybullet(player1,enemy1)
-    var enemyBullet2 = new Enemybullet(player1,enemy2)
-    var enemyBullet3 = new Enemybullet(player1,enemy3)
-    enemy1.moveEnemy()
-    enemy2.moveEnemy()
-    enemy3.moveEnemy()
-    if (enemy1.alive === true) {
-    enemyBullet1.createShoot()
-   }
-   if (enemy2.alive === true) {
-    enemyBullet2.createShoot()
-   }
-   if (enemy3.alive === true) {
-    enemyBullet3.createShoot()
-   }
+    
+   
+    
+    
+    
+    
+    if (enemy1.alive) {
+        enemy1.moveEnemy()
+        var enemyBullet1 = new Enemybullet(player1,enemy1)    
+        enemyBullet1.createShoot()
+        
+    }
+    if (enemy2.alive) {
+        enemy2.moveEnemy()
+        var enemyBullet2 = new Enemybullet(player1,enemy2)
+        enemyBullet2.createShoot()
+        
+    }
+    if (enemy3.alive) {
+        enemy3.moveEnemy()
+        var enemyBullet3 = new Enemybullet(player1,enemy3)
+        enemyBullet3.createShoot()
+        
+    }   
 
 }
 
@@ -119,7 +134,7 @@ function interval() {
     let startButton = document.querySelector("#start button");
     startButton.onclick = function () {
     document.querySelector("#start").style.display = "none";
-    setInterval(gameLoop, 500)
+    setInterval(gameLoop, 2000)
     document.querySelector("#scenary").style.display = 'block'
   }
 }
