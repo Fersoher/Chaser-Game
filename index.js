@@ -72,6 +72,7 @@ window.addEventListener('keydown', function (e) {
     if (e.key == 'w') {
         player1.direction = "up"
         player1.movePlayer()
+        console.log('ESSTAS PULSANDO W')
     }
     if (e.key == 'a') {
         player1.direction = "left"
@@ -99,6 +100,7 @@ function gameLoop() {
     var enemyBullet1 = new Enemybullet(player1, enemy1)
     var enemyBullet2 = new Enemybullet(player1, enemy2)
     var enemyBullet3 = new Enemybullet(player1, enemy3)
+    
     enemy1.moveEnemy()
     enemy2.moveEnemy()
     enemy3.moveEnemy()
@@ -131,6 +133,7 @@ function gameLoop() {
     
     winScreen()
 }
+
 
 function gameOverbutton() {
         

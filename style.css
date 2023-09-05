@@ -50,7 +50,7 @@ table {
     width: 100%;
     margin: auto;
     background-color: rgb(194, 245, 252);
-    background-image: url(./assets/Grey_Brick.webp);
+    background-image: url(./assets/ground-map.png);
     background-size: 5vh;
 
 
@@ -180,7 +180,7 @@ table {
     width: 100%;
     border: none;
     position: absolute;
-    margin: auto;
+    margin: 0;
     padding: 0%;
     background-repeat: no-repeat;
    
