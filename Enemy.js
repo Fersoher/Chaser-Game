@@ -2,7 +2,7 @@ function Enemy(x, y) {
 
     this.x = x
     this.y = y
-    this.direction = ''
+    this.direction = 'downenemy'
     var self = this
     this.alive = true
 
@@ -14,7 +14,7 @@ function Enemy(x, y) {
     }
     this.randomMove = function () {
 
-        var move = ["up", "left", "right", "down"]
+        var move = ["upenemy", "leftenemy", "rightenemy", "downenemy"]
         this.direction = move[Math.floor(Math.random() * 4)]
 
     }
@@ -22,30 +22,33 @@ function Enemy(x, y) {
         this.checkBullet()
         if (self.alive === true) {
 
+            var x = self.x
+            var y = self.y
+
             self.randomMove()
             switch (self.direction) {
-                case 'up':
+                case 'upenemy':
                     if (checkBoundaries(document.querySelector(`#row${self.y - 1} #col${self.x}`))) {
 
                     } else {
                         self.y--
                     }
                     break
-                case 'left':
+                case 'leftenemy':
                     if (checkBoundaries(document.querySelector(`#row${self.y} #col${self.x - 1}`))) {
 
                     } else {
                         self.x--
                     }
                     break
-                case 'down':
+                case 'downenemy':
                     if (checkBoundaries(document.querySelector(`#row${self.y + 1} #col${self.x}`))) {
 
                     } else {
                         self.y++
                     }
                     break
-                case 'right':
+                case 'rightenemy':
                     if (checkBoundaries(document.querySelector(`#row${self.y} #col${self.x + 1}`))) {
 
                     } else {
@@ -58,47 +61,48 @@ function Enemy(x, y) {
         } else {
             
         }
-        self.erase()
+        self.erase(x,y)
         self.drawEnemy();
 
     }
     this.drawEnemy = function () {
         var enemyCell = document.querySelector(`#row${this.y} #col${this.x}`)
         enemyCell.classList.add("enemy")
+        enemyCell.classList.add(self.direction)
     }
-    this.erase = function () {
-        var enemyCell = document.querySelector(`#row${this.y - 1} #col${this.x}`)
+    
+    this.erase = function (x,y) {
+        var enemyCell = document.querySelector(`#row${y} #col${x}`)
         enemyCell.classList.remove('enemy')
-        var enemyCell = document.querySelector(`#row${this.y + 1} #col${this.x}`)
-        enemyCell.classList.remove('enemy')
-        var enemyCell = document.querySelector(`#row${this.y} #col${this.x - 1}`)
-        enemyCell.classList.remove('enemy')
-        var enemyCell = document.querySelector(`#row${this.y} #col${this.x + 1}`)
-        enemyCell.classList.remove('enemy')
+        var directions = ['upenemy', 'downenemy', 'leftenemy', 'rightenemy']
+        directions.forEach((direction) => {
+            enemyCell.classList.remove(direction)
+        })
+        
     }
 
     this.collisionCheck = function (direction) {
         let x, y;
         switch (this.direction) {
-            case "up":
+            case "upenemy":
                 self.y - 1;
                 self.x;
                 return self.checkBoundaries(cell)
                 document.querySelector(`#row${y} #col${x}`)
                     ;
-            case "left":
+            case "leftenemy":
                 self.y;
                 self.x - 1;
                 return self.checkBoundaries(cell)
                 document.querySelector(`#row${y} #col${x}`)
                     ;
-            case "down":
+            case "downenemy":
                 self.y + 1;
                 self.x;
                 return self.checkBoundaries(cell)
                 document.querySelector(`#row${y} #col${x}`)
                     ;
-            case "right":
+            case "rightenemy":
                 self.y;
                 self.x + 1;
                 return self.checkBoundaries(cell)

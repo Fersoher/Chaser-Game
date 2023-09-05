@@ -11,7 +11,7 @@ function Enemybullet(player, enemy) {
         this.x = enemy.x
         this.y = enemy.y
         switch (this.direction) {
-            case 'up':
+            case 'upenemy':
                 this.y = enemy.y - 1
                 console.log(this.y, this.x)
                 var bulletCell = document.querySelector(`#row${this.y} #col${this.x}`)
@@ -31,7 +31,7 @@ function Enemybullet(player, enemy) {
                 }
                 
                 break
-            case 'left':
+            case 'leftenemy':
                 this.x = enemy.x - 1
                 var bulletCell = document.querySelector(`#row${this.y} #col${this.x}`)
                 for (this.y; !document.querySelector(`#row${this.y} #col${this.x}`).classList.contains('wall'); this.x--) {
@@ -47,7 +47,7 @@ function Enemybullet(player, enemy) {
                 }
                 
                 break
-            case 'down':
+            case 'downenemy':
                 this.y = enemy.y + 1
                 var bulletCell = document.querySelector(`#row${this.y} #col${this.x}`)
                 for (this.y; !document.querySelector(`#row${this.y} #col${this.x}`).classList.contains('wall'); this.y++) {
@@ -62,7 +62,7 @@ function Enemybullet(player, enemy) {
                     }
                 }
                 break
-            case 'right':
+            case 'rightenemy':
                 this.x = enemy.x + 1
                 var bulletCell = document.querySelector(`#row${this.y} #col${this.x}`)
                 for (this.y; !document.querySelector(`#row${this.y} #col${this.x}`).classList.contains('wall'); this.x++) {

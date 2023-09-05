@@ -57,6 +57,25 @@ tr {
     background-size: 4vh;
 
 }
+
+.upenemy {
+    background-image: url("./assets/enemyUp.png"), url(./assets/Grey_Brick.webp);
+}
+
+
+.downenemy {
+    background-image: url("./assets/enemyDown.png"), url(./assets/Grey_Brick.webp);
+}
+
+
+.leftenemy {
+    background-image: url("./assets/enemyLeft.png"), url(./assets/Grey_Brick.webp);
+}
+
+
+.rightenemy {
+    background-image: url("./assets/enemyRight.png"), url(./assets/Grey_Brick.webp);
+}
 .bullet {
     
     z-index: 1;
