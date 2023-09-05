@@ -52,10 +52,15 @@ function Player(x, y) {
     this.drawPlayer = function () {
         var playerCell = document.querySelector(`#row${this.y} #col${this.x}`)
         playerCell.classList.add("player")
+        playerCell.classList.add(self.direction)
     }
     this.erase = function () {
         var playerCell = document.querySelector('.player')
         playerCell.classList.remove('player')
+        var directions = ['up', 'down', 'left', 'right']
+        directions.forEach((direction) => {
+            playerCell.classList.remove(direction)
+        })
     }
 
     this.style = function () {

@@ -22,7 +22,7 @@ td {
     position: relative;
     width: 4vw;
     height: 4vh;
-    background-image: url(./assets/Grey_Brick.webp);
+    
     background-size: 100%;
 }
 
@@ -43,9 +43,27 @@ tr {
 .player{
     width: 20px;
     height: 20px;
-    background-image: url(./assets/tankdown.png);
     background-repeat: no-repeat;
-    background-size: 4vh;
+    background-size: 100%;
+}
+
+.up {
+    background-image: url("./assets/tankup.png"), url(./assets/Grey_Brick.webp);
+}
+
+
+.down {
+    background-image: url("./assets/tankdown.png"), url(./assets/Grey_Brick.webp);
+}
+
+
+.left {
+    background-image: url("./assets/tankleft.png"), url(./assets/Grey_Brick.webp);
+}
+
+
+.right {
+    background-image: url("./assets/tankright.png"), url(./assets/Grey_Brick.webp);
 }
 
 .enemy {
