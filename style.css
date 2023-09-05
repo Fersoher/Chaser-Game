@@ -1,0 +1,192 @@
+#scenary {
+
+    display: none;
+    height: 90vh;
+    width: 90vh;
+    margin: auto;
+}
+
+#board {
+    border: black 2px solid;
+    height: 100%;
+    width: 100%;
+    margin: auto;
+    background-color: rgb(194, 245, 252);
+    background-image: url(./assets/Grey_Brick.webp);
+    background-size: 4vh;
+
+
+
+
+}
+.winagain{
+
+    background-image: url(./assets/game-over.gif);
+    background-size: 100%;
+    background-color: transparent;
+    cursor: pointer;
+    height: 25vh;
+    width: 25vw;
+    border: none;
+    position: relative;
+    margin: 0 auto;
+    display: flex;
+    top: 50%;
+    background-repeat: no-repeat;
+}
+
+.wins {
+    display: none;
+    background-image: url(./assets/WINSCREEN.gif);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    height: 100vh;
+    width: 100vw;
+    border: none;
+    position: absolute;
+    margin: auto;
+    margin: auto;
+
+}
+
+td {
+   
+    width: 4vw;
+    height: 4vh;
+    background-size: 100%;
+}
+
+tr {
+
+        
+    width: 4vw;
+    height: 4vh;
+}
+
+.wall {
+    background-color: grey;
+    background-image: url(./assets/Grey_Block.webp);
+    background-repeat: no-repeat;
+    background-size: 4vh;
+    background-size: 100%;
+    position: relative;
+
+}
+
+.player {
+    width: 20px;
+    height: 20px;
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+.up {
+    background-image: url("./assets/tankup.png"), url(./assets/Grey_Brick.webp);
+}
+
+
+.down {
+    background-image: url("./assets/tankdown.png"), url(./assets/Grey_Brick.webp);
+}
+
+
+.left {
+    background-image: url("./assets/tankleft.png"), url(./assets/Grey_Brick.webp);
+}
+
+
+.right {
+    background-image: url("./assets/tankright.png"), url(./assets/Grey_Brick.webp);
+}
+
+.enemy {
+
+    width: 20px;
+    height: 20px;
+    background-image: url(./assets/tanks\(2\).png);
+    background-repeat: inherit;
+    background-size: 4vh;
+
+}
+
+.bullet {
+    background-color: transparent;
+    z-index: 1;
+    background-image: url(./assets/bubble-removebg-preview.png);
+    background-repeat: no-repeat;
+    margin: 0 auto;
+}
+
+#start button {
+    background-image: url(./assets/game-start\ \(1\).gif);
+    background-size: 100%;
+    background-color: transparent;
+    cursor: pointer;
+    height: 200px;
+    width: 250px;
+    border: none;
+    position: relative;
+    margin-top: 25%;
+    margin-left: 37%;
+
+    background-repeat: no-repeat;
+}
+
+#start {
+
+    background-size: 100%;
+    background-image: url(./assets/chasre_walpp.png);
+    height: 100vh;
+    width: 100vw;
+    border: none;
+    position: absolute;
+    margin: auto;
+    background-repeat: no-repeat;
+    top: 5%;
+    left: 5%;
+}
+
+#game-over {
+    display: none;
+    background-size: 100%;
+    background-image: url(./assets/GAMEOIVERWPPP.png);
+    height: 100%;
+    width: 100%;
+    border: none;
+    position: absolute;
+    margin: auto;
+    background-repeat: no-repeat;
+    top: 5%;
+    left: 5%;
+}
+
+.try-again {
+
+    background-image: url(./assets/game-over.gif);
+    background-size: 100%;
+    background-color: transparent;
+    cursor: pointer;
+    height: 25vh;
+    width: 25vw;
+    border: none;
+    position: relative;
+    margin: 0 auto;
+    display: flex;
+    top: 50%;
+    background-repeat: no-repeat;
+}
+
+.tankgif {
+
+    background-image: url(./assets/arman-javadi-tank1.gif);
+    background-size: 100%;
+    height: 100vh;
+    width: 60vw;
+    border: none;
+    position: relative;
+    margin: 0 auto;
+    top: 25%;
+    background-repeat: no-repeat;
+    display: none;
+
+}
