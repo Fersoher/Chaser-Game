@@ -63,7 +63,6 @@ let boundMap = [
     ['-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-'],
 ]
 
-createBoard()
 
 // Creación de colisiones y movimientos
 
@@ -102,11 +101,6 @@ window.addEventListener('keydown', function (e) {
 
 function gameLoop(){
     
-   
-    
-    
-    
-    
     if (enemy1.alive) {
         enemy1.moveEnemy()
         var enemyBullet1 = new Enemybullet(player1,enemy1)    
@@ -125,19 +119,38 @@ function gameLoop(){
         enemyBullet3.createShoot()
         
     }   
-
-}
-
-function interval() {
-    
-    document.querySelector("#start button")
-    let startButton = document.querySelector("#start button");
-    startButton.onclick = function () {
-    document.querySelector("#start").style.display = "none";
-    setInterval(gameLoop, 500)
-    document.querySelector("#scenary").style.display = 'block'
-  }
-}
-
-interval()
+    function winScreen() {
+        if (enemy1.alive === false && enemy2.alive === false && enemy3.alive === false) {
+             document.querySelector(".wins").style.display = "block";
+             document.querySelector("#board").style.display = "none";
+         }
+         function winagain() {
+             let tryButton = document.querySelector(".winagain");
+             tryButton.onclick = function () {
+                 location.reload();
+             };
+         }
+ 
+         winagain();
+ 
+     }
+ 
+ 
+     winScreen()
+ }
+ 
+ 
+ function gameOverbutton() {
+ 
+         document.querySelector("#start button")
+     let startButton = document.querySelector("#start button");
+     startButton.onclick = function () {
+         createBoard()
+         document.querySelector("#start").style.display = "none";
+         document.querySelector("#scenary").style.display = 'block'}
+     }
+ 
+ 
+ gameOverbutton()
+ setInterval(gameLoop, 500)
 

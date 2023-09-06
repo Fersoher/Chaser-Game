@@ -5,18 +5,18 @@ function Player(x, y) {
     var self = this
     this.alive = true
 
-    
+
 
     this.movePlayer = function () {
         if (self.alive === true) {
             this.style()
             switch (self.direction) {
                 case 'up':
-                    
+
                     if (checkBoundaries(document.querySelector(`#row${self.y - 1} #col${self.x}`))) {
-                        
+
                     } else {
-                        
+
                         self.y--
                     }
                     break
@@ -41,13 +41,38 @@ function Player(x, y) {
                         self.x++
                     }
                     break
+
             }
 
             self.erase()
-        self.drawPlayer();
-        }
+            self.drawPlayer();
+            
+        } else {
+            function tankgif() {
+
+                document.querySelector("#game-over").style.display = "none"
+                document.querySelector(".tankgif").style.display = "flex"
+                document.querySelector("#board").style.display = "none"
+                //document.querySelector("body").style.background-repeat = "no-repeat"
+                document.querySelector("#scenary").style.display = "none"
+
+            }
+
+            tankgif()
+
+            function gameOverScreen() {
+                document.querySelector("#game-over").style.display = "block"
+                document.querySelector("#board").style.display = "none"
+                document.querySelector(".tankgif").style.display = "none"
+            }
+
+
+            setTimeout(gameOverScreen, 5000)
 
         
+        }
+
+
     }
     this.drawPlayer = function () {
         var playerCell = document.querySelector(`#row${this.y} #col${this.x}`)
@@ -65,7 +90,7 @@ function Player(x, y) {
 
     this.style = function () {
         switch (this.direction) {
-            case 'up' :
+            case 'up':
                 self.style.backgroundImage = "url(./assets/tankup.png)"
         }
     }
@@ -109,7 +134,20 @@ function Player(x, y) {
 
 
 }
+function gameOverbutton() {
 
+
+    let startButton = document.querySelector(".try-again");
+    startButton.onclick = function () {
+    
+        location.reload();
+    
+    }
+    
+    
+    }
+    
+    gameOverbutton()
 
 
 

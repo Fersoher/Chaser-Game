@@ -1,3 +1,24 @@
+.tankgif {
+
+    background-image: url(./assets/TANKEGIF.gif);
+    background-size: 75%;
+    height: 100vh;
+    width: 70vw;
+    border: none;
+    position: relative;
+    background-repeat: no-repeat;
+    display: none;
+    margin-left: 20%;
+}
+
+body {
+
+    background-image: url(./assets/BODYWALLPAPER.png);
+    background-size: 100%;
+    background-repeat: repeat;
+
+}
+
 #scenary {
 
     display: none;
@@ -97,16 +118,6 @@ tr {
 .rightenemy {
     background-image: url("./assets/enemyRight.png"), url(./assets/Grey_Brick.webp);
 }
-/*.bullet {
-
-    width: 5px;
-    height: 5px;
-    background-image: url(./assets/bulletVer.png);
-    background-repeat: no-repeat;
-    background-size: 5vh;
-    margin: 0;
-
-}*/
 
 .bulletHor {
     background-image: url("./assets/bulletHor.png");
@@ -115,15 +126,12 @@ tr {
     margin: 0;
 }
 
-
 .bulletVer {
     background-image: url("./assets/bulletVer.png");
     background-repeat: no-repeat;
     background-size: 5vh;
     margin: 0;
 }
-
-
 
 .bulletEnemyHor {
     width: 5px;
@@ -145,35 +153,90 @@ tr {
 
 }
 #start button {
-    background-image: url(./assets/defi_start_button.png);
+    background-image: url(./assets/game-start\ \(1\).gif);
     background-size: 100%;
+    background-color: transparent;
     cursor: pointer;
-    height: 17vh;
-    width: 25vw;
+    height: 200px;
+    width: 250px;
     border: none;
     position: relative;
-    margin: 0 auto;
-    justify-content: center;
-    align-items: center;
-    display: flex;
-    top: 60%;
+    margin-top: 25%;
+    margin-left: 37%;
 
-
+    background-repeat: no-repeat;
 }
 
 #start {
 
     background-size: 100%;
-    background-image: url(./assets/chasre_walpp.png);
-    height: 90vh;
-    width: 90vw;
+    background-image: url(./assets/firstScreen.gif);
+    height: 98vh;
+    width: 98vw;
     border: none;
     position: absolute;
-    margin: auto; 
+    margin: auto;
+    padding: 0%;
     background-repeat: no-repeat;
-    top: 5%;
-    left: 5%;
-    transition: opacity;
-    filter: blur(10px);
 
 }
+
+#game-over {
+    display: none;
+    background-size: 100%;
+    background-image: url(./assets/gameOverWallpaper.gif);
+    height: 100%;
+    width: 100%;
+    border: none;
+    position: absolute;
+    margin: 0;
+    padding: 0%;
+    background-repeat: no-repeat;
+
+}
+
+.try-again {
+
+    background-image: url(./assets/game-over.gif);
+    background-size: 100%;
+    background-color: transparent;
+    cursor: pointer;
+    height: 25vh;
+    width: 25vw;
+    border: none;
+    position: relative;
+    margin: 0 auto;
+    display: flex;
+    top: 50%;
+    background-repeat: no-repeat;
+}
+.winagain{
+
+    background-image: url(./assets/continuePress.gif);
+    background-size: 100%;
+    background-color: transparent;
+    cursor: pointer;
+    height: 25vh;
+    width: 25vw;
+    border: none;
+    position: relative;
+    margin: 0 auto;
+    display: flex;
+    top: 50%;
+    background-repeat: no-repeat;
+}
+
+.wins {
+    display: none;
+    background-image: url(./assets/WIN-BACKGROUND.gif);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    height: 100vh;
+    width: 100vw;
+    border: none;
+    position: absolute;
+    margin: auto;
+    margin: auto;
+
+}
+
