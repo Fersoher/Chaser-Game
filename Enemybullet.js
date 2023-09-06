@@ -8,7 +8,6 @@ function Enemybullet(player, enemy) {
     this.cells = []
 
     this.createShoot = function () {
- 
         switch (this.direction) {
             case 'upenemy':
 
