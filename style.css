@@ -124,39 +124,6 @@ tr {
     background-image: url("./assets/enemyRight.png"), url("./assets/bloquesuelo.jpg");
 }
 
-.bulletHor {
-    background-image: url("./assets/bulletHor.png");
-    background-repeat: no-repeat;
-    background-size: 5vh;
-    margin: 0;
-}
-
-.bulletVer {
-    background-image: url("./assets/bulletVer.png");
-    background-repeat: no-repeat;
-    background-size: 5vh;
-    margin: 0;
-}
-
-.bulletEnemyHor {
-    width: 5px;
-    height: 5px;
-    background-image: url(./assets/bulletEnemyHor.png);
-    background-repeat: no-repeat;
-    background-size: 5vh;
-    margin: 0;
-
-}
-
-.bulletEnemyVer {
-    width: 5px;
-    height: 5px;
-    background-image: url(./assets/bulletEnemyVer.png);
-    background-repeat: no-repeat;
-    background-size: 5vh;
-    margin: 0;
-
-}
 #start button {
     background-image: url(./assets/game-start\ \(1\).gif);
     background-size: 100%;
@@ -267,4 +234,36 @@ tr {
 
 }
 
+.bulletEnemyHor {
+    width: 5px;
+    height: 5px;
+    background-image: url(./assets/bulletEnemyHor.png);
+    background-repeat: no-repeat;
+    background-size: 5vh;
+    margin: 0;
 
+}
+
+.bulletEnemyVer {
+    width: 5px;
+    height: 5px;
+    background-image: url(./assets/bulletEnemyVer.png);
+    background-repeat: no-repeat;
+    background-size: 5vh;
+    margin: 0;
+
+}
+
+.bulletHor {
+    background-image: url("./assets/bulletHor.png");
+    background-repeat: no-repeat;
+    background-size: 5vh;
+    margin: 0;
+}
+
+.bulletVer {
+    background-image: url("./assets/bulletVer.png");
+    background-repeat: no-repeat;
+    background-size: 5vh;
+    margin: 0;
+}
