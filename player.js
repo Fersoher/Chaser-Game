@@ -72,7 +72,7 @@ function Player(x, y) {
 
     let startButton = document.querySelector(".try-again")
     startButton.onclick = function () {
-        location.reload();
+        location.reload()
     }
 
 }

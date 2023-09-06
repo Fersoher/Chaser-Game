@@ -103,36 +103,31 @@ function gameLoop() {
         enemy1.moveEnemy()
         var enemyBullet1 = new Enemybullet(player1, enemy1)
         enemyBullet1.createShoot()
-
     }
+
     if (enemy2.alive) {
         enemy2.moveEnemy()
         var enemyBullet2 = new Enemybullet(player1, enemy2)
         enemyBullet2.createShoot()
-
     }
+
     if (enemy3.alive) {
         enemy3.moveEnemy()
         var enemyBullet3 = new Enemybullet(player1, enemy3)
         enemyBullet3.createShoot()
-
     }
+
     function winScreen() {
         if (enemy1.alive === false && enemy2.alive === false && enemy3.alive === false) {
             document.querySelector(".wins").style.display = "block"
             document.querySelector("#board").style.display = "none"
+        } 
+        let tryButton = document.querySelector(".winagain")
+        tryButton.onclick = function () {
+            location.reload()
         }
-        function winagain() {
-            let tryButton = document.querySelector(".winagain");
-            tryButton.onclick = function () {
-                location.reload()
-            };
-        }
-
-        winagain();
-
+        
     }
-
 
     winScreen()
 }
