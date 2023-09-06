@@ -24,6 +24,7 @@ function Player(x, y) {
 
                     if (checkBoundaries(document.querySelector(`#row${self.y} #col${self.x - 1}`))) {
                     } else {
+
                         self.x--
                     }
                     break
@@ -31,6 +32,7 @@ function Player(x, y) {
                     if (checkBoundaries(document.querySelector(`#row${self.y + 1} #col${self.x}`))) {
 
                     } else {
+
                         self.y++
                     }
                     break
@@ -38,6 +40,7 @@ function Player(x, y) {
                     if (checkBoundaries(document.querySelector(`#row${self.y} #col${self.x + 1}`))) {
 
                     } else {
+                        
                         self.x++
                     }
                     break

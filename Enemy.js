@@ -4,11 +4,23 @@ function Enemy(x,y) {
     this.direction = 'downenemy'
     var self = this
     this.alive = true
+    const audioexplosion = new Audio("./assets/explosion sonido.mp3")
 
     this.checkBullet = function () {
         var position = (document.querySelector(`#row${this.y} #col${this.x}`))
         if (position.classList.contains("bulletVer")||position.classList.contains("bulletHor")) {
             this.alive = false
+            position.classList.remove("upenemy")
+            position.classList.remove("downenemy")
+            position.classList.remove("leftenemy")
+            position.classList.remove("rigthenemy")
+            position.classList.add("explosion")
+            audioexplosion.play()
+            var destroyed = function () 
+            {position.classList.remove("explosion")
+            position.classList.add("enemyDestruido")}
+
+            setTimeout (destroyed, 1500)
         }
     }
     this.randomMove = function () {

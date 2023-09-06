@@ -7,11 +7,13 @@ var player1 = new Player(10, 19)
 var enemy1 = new Enemy(10, 3)
 var enemy2 = new Enemy(4, 6)
 var enemy3 = new Enemy(14, 5)
-const audio = new Audio("assets/Density & Time - MAZE.mp3");
-audio.volume = 0.2;
-audio.play()
-function createBoard() {
+const audio = new Audio("./assets/Density & Time - MAZE.mp3");
+const audiodisparo = new Audio("./assets/disparo.mp3")
 
+audio.volume = 0.2;
+
+function createBoard() {
+    audio.play()
     var obstacles = [];
     var table = document.getElementById("board");
     boundMap.forEach((row, i) => {
@@ -89,12 +91,10 @@ window.addEventListener('keydown', function (e) {
 
         if (player1.alive) {
             var bullet = new Bullet(player1)
+            audiodisparo.play()
             bullet.createShoot()
+            
         }
-
-
-
-
 
     }
 
@@ -140,7 +140,6 @@ function gameLoop() {
     winScreen()
 }
 
-
 function gameOverbutton() {
 
     document.querySelector("#start button")
@@ -151,7 +150,6 @@ function gameOverbutton() {
         document.querySelector("#scenary").style.display = 'block'
     }
 }
-
 
 gameOverbutton()
 setInterval(gameLoop, 500)

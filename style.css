@@ -38,7 +38,7 @@ table {
     width: 100%;
     margin: auto;
     background-color: rgb(194, 245, 252);
-    background-image: url(./assets/Grey_Brick.webp);
+    background-image: url("./assets/bloquesuelo.jpg");
     background-size: 4vh;
 
 
@@ -48,7 +48,7 @@ td {
 
     width: 20px;
     height: 20px;
-    background-image: url(./assets/Grey_Brick.webp);
+    background-image: url("./assets/bloquesuelo.jpg");
     background-size: 100%;
 }
 
@@ -75,22 +75,22 @@ tr {
 }
 
 .up {
-    background-image: url("./assets/tankup.png"), url(./assets/Grey_Brick.webp);
+    background-image: url("./assets/tankup.png"), url("./assets/bloquesuelo.jpg");
 }
 
 
 .down {
-    background-image: url("./assets/tankdown.png"), url(./assets/Grey_Brick.webp);
+    background-image: url("./assets/tankdown.png"), url("./assets/bloquesuelo.jpg");
 }
 
 
 .left {
-    background-image: url("./assets/tankleft.png"), url(./assets/Grey_Brick.webp);
+    background-image: url("./assets/tankleft.png"), url("./assets/bloquesuelo.jpg");
 }
 
 
 .right {
-    background-image: url("./assets/tankright.png"), url(./assets/Grey_Brick.webp);
+    background-image: url("./assets/tankright.png"), url("./assets/bloquesuelo.jpg");
 }
 
 
@@ -106,22 +106,22 @@ tr {
 }
 
 .upenemy {
-    background-image: url("./assets/enemyUp.png"), url(./assets/Grey_Brick.webp);
+    background-image: url("./assets/enemyUp.png"), url("./assets/bloquesuelo.jpg");
 }
 
 
 .downenemy {
-    background-image: url("./assets/enemyDown.png"), url(./assets/Grey_Brick.webp);
+    background-image: url("./assets/enemyDown.png"), url("./assets/bloquesuelo.jpg");
 }
 
 
 .leftenemy {
-    background-image: url("./assets/enemyLeft.png"), url(./assets/Grey_Brick.webp);
+    background-image: url("./assets/enemyLeft.png"), url("./assets/bloquesuelo.jpg");
 }
 
 
 .rightenemy {
-    background-image: url("./assets/enemyRight.png"), url(./assets/Grey_Brick.webp);
+    background-image: url("./assets/enemyRight.png"), url("./assets/bloquesuelo.jpg");
 }
 
 .bulletHor {
@@ -175,7 +175,7 @@ tr {
 #start {
 
     background-size: 100%;
-    background-image: url(./assets/firstScreen.gif);
+    background-image: url(./assets/WINfinished.gif);
     height: 98vh;
     width: 98vw;
     border: none;
@@ -232,6 +232,7 @@ tr {
 }
 
 .wins {
+
     display: none;
     background-image: url(./assets/WIN-BACKGROUND.gif);
     background-size: 100%;
@@ -244,4 +245,26 @@ tr {
     margin: auto;
 
 }
+
+.explosion {
+
+    width: 20px;
+    height: 20px;
+    background-image: url(./assets/explosion.gif);
+    background-size: 4vh;
+    background-color: transparent;
+    position: relative;
+    background-repeat: no-repeat;
+}
+
+.enemyDestruido {
+
+    width: 20px;
+    height: 20px;
+    background-image: url(./assets/tanke\ destruido.png);
+    background-repeat:  no-repeat ;
+    background-size: 4vh;
+
+}
+
 
