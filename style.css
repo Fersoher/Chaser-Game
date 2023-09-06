@@ -19,6 +19,11 @@ body {
 
 }
 
+table {
+    top: 6%;
+    position: relative;
+}
+
 #scenary {
 
     display: none;
