@@ -134,7 +134,7 @@ function interval() {
     let startButton = document.querySelector("#start button");
     startButton.onclick = function () {
     document.querySelector("#start").style.display = "none";
-    setInterval(gameLoop, 2000)
+    setInterval(gameLoop, 500)
     document.querySelector("#scenary").style.display = 'block'
   }
 }
