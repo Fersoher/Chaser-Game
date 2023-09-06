@@ -1,4 +1,5 @@
-body {
+
+    body {
 
     background-image: url(./assets/BODYWALLPAPER.png);
     background-size: 100%;
@@ -21,14 +22,14 @@ tr {
 .tankgif {
 
     background-image: url(./assets/TANKEGIF.gif);
-    background-size: 100%;
+    background-size: 75%;
     height: 100vh;
-    width: 60vw;
+    width: 70vw;
     border: none;
     position: relative;
     background-repeat: no-repeat;
     display: none;
-    margin-left: 15%;
+    margin-left: 20%;
 
 }
 
@@ -104,25 +105,27 @@ table {
     height: 20px;
     background-repeat: no-repeat;
     background-size: 100%;
+    background-color: transparent;
 }
 
+
 .up {
-    background-image: url("./assets/tankup.png"), url(./assets/Grey_Brick.webp);
+    background-image: url("./assets/tankup.png"), url(./assets/Diseño\ sin\ título\ \(3\)\ \(1\).png);
 }
 
 
 .down {
-    background-image: url("./assets/tankdown.png"), url(./assets/Grey_Brick.webp);
+    background-image: url("./assets/tankdown.png"), url(./assets/Diseño\ sin\ título\ \(3\)\ \(1\).png);
 }
 
 
 .left {
-    background-image: url("./assets/tankleft.png"), url(./assets/Grey_Brick.webp);
+    background-image: url("./assets/tankleft.png"), url(./assets/Diseño\ sin\ título\ \(3\)\ \(1\).png);
 }
 
 
 .right {
-    background-image: url("./assets/tankright.png"), url(./assets/Grey_Brick.webp);
+    background-image: url("./assets/tankright.png"), url(./assets/Diseño\ sin\ título\ \(3\)\ \(1\).png);
 }
 
 .enemy {

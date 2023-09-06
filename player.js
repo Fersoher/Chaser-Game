@@ -50,6 +50,9 @@ function Player(x, y) {
                 document.querySelector("#game-over").style.display = "none"
                 document.querySelector(".tankgif").style.display = "flex"
                 document.querySelector("#board").style.display = "none"
+                //document.querySelector("body").style.background-repeat = "no-repeat"
+                document.querySelector("#scenary").style.display = "none"
+
             }
 
             tankgif()
