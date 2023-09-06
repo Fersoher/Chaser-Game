@@ -1,15 +1,14 @@
 function Enemybullet(player, enemy) {
     
-    this.y = null
-    this.x = null
+    this.y = enemy.y
+    this.x = enemy.x
     this.direction = enemy.direction
     var self = this
     this.timerId
     this.cells = []
 
     this.createShoot = function () {
-        this.x = enemy.x
-        this.y = enemy.y
+ 
         switch (this.direction) {
             case 'upenemy':
 

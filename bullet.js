@@ -1,16 +1,12 @@
 function Bullet(player) {
-    this.y = null
-    this.x = null
+    this.y = player.y
+    this.x = player.x
     this.direction = player.direction
     var self = this
     this.timerId
     this.cells = []
 
     this.createShoot = function () {
-        
-        this.x = player.x
-        this.y = player.y
-
         switch (this.direction) {
             case 'up':
                 this.y = player.y - 1
